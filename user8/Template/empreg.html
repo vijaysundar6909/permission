@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>employee register</title>
+     <style>
+      div {
+        margin-bottom: 5px;
+      }
+      label {
+        display: inline-block;
+        width: 100px;
+        text-align: right;
+      }
+    </style>
+</head>
+<body>
+
+<form action="" method="post" >
+    {% csrf_token %}
+    <label>First Name</label>
+    <input type="text" name="first_name"required> <br><br>
+    <label>Last Name</label>
+    <input type = "text" name="last_name"> <br><br>
+    <label>User Name</label>
+    <input type = "text" name="username"> <br><br>
+    <label>Email ID</label>
+    <input type = "email" name="email"> <br><br>
+    <label>Password</label>
+    <input type = "password" name="password"> <br><br>
+    <div>
+        <select name="type" >
+            <option value="employee">Employee </option>
+            <option value="staff">Staff </option>
+        </select>
+    </div>
+    <input type="submit" value="Register">
+</form>
+
+</body>
+</html>

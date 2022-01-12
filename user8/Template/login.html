@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+    <style>
+    {% load static %}
+      center {
+      padding-top:22%;
+         }
+       label {
+        display: inline-block;
+        width: 100px;
+        text-align: left;
+        }
+      </style>
+</head>
+
+<body style ="background-image: url('{% static 'img/1st.jpg' %}');background-size:cover;">
+<div align="left" style="background-color:aqua; height:50px; padding-top:4%"> </div>
+<div style="background-image: url('{% static 'img/flight.jpg' %}')"></div>
+
+<form action="" method="post">
+   {% csrf_token %}
+  <center> <label>User Name</label>
+    <input type="text" name="username"> <br><br>
+    <label>Password</label>
+    <input type = "password" name="password"> <br><br>
+  <input type="submit" value="login"></center>
+</form>
+</body>
+</html>
